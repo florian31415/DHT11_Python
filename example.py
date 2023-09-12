@@ -4,7 +4,7 @@ import time
 import datetime
 
 # initialize GPIO
-GPIO.setwarnings(False)
+GPIO.setwarnings(True)
 GPIO.setmode(GPIO.BCM)
 
 # read data using pin 14
@@ -19,7 +19,7 @@ try:
 			print("Humidity: %-3.1f %%" % result.humidity)
 		else:
 			print("Sorry result was invalid. Trying again in 6 Seconds")
-			print("Error code was: ")
+			print("Error code was: " + str(result.error_code))
 		time.sleep(6)
 
 except KeyboardInterrupt:
