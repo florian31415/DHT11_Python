@@ -2,7 +2,7 @@ import time
 import RPi
 
 
-class DHT11Result:
+class DHT11Result():
     'DHT11 sensor result returned by DHT11.read() method'
 
     ERR_NO_ERROR = 0
@@ -22,7 +22,7 @@ class DHT11Result:
         return self.error_code == DHT11Result.ERR_NO_ERROR
 
 
-class DHT11:
+class DHT11():
     'DHT11 sensor reader class for Raspberry'
 
     __pin = 0
